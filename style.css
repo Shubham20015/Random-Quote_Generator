@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:600");
+:root{
+    --main-color: #54a0ff;
+    --secondary-color: #b0c8e0;
+    --secondary-color: #dae5f0;
+    --sans: "josefin sans" , sans-serif;
+}
+
+body{
+    background: #222f3e;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: 70vh;
+    background: var(--main-color);
+    border-radius: 5px;
+    font-family: "dancing script" , cursive;
+    overflow: hidden;
+    color: #797D7F;
+    letter-spacing: 0.5px;
+    display: grid;
+    place-items: center;
+}
+
+.inner{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    opacity: 1;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+}
+
+.number::before{
+    content: "";
+    position: absolute;
+    top: -130px;
+    right: -30px;
+    width: 90px;
+    height: 200px;
+    background: var(--secondary-color);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: -1;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5);
+}
+
+.number{
+    font-family: var(--sans);
+    position: absolute;
+    margin: 0;
+    top: 15px;
+    right: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.number img{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: -25px;
+    top: -7px;
+    cursor: pointer;
+    animation: rot 1s linear;
+}
+
+.number:hover img{
+    animation: rot 1s linear;
+}
+
+@keyframes rot{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.quote{
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 80%;
+    font-size: 1.3rem;
+}
+
+.author{
+    position: absolute;
+    top: 70%;
+    left: 95%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 80%;
+    font-family: var(--sans);
+    font-size: 1.2rem;
+}
+
+.start-quote{
+    font-size: 60px;
+    position: absolute;
+    top: 12%;
+    left: 6%;
+    opacity: 0.2;
+}
+
+#newQ{
+    background: rgb(89, 89, 245);
+    text-align: center;
+    padding: 10px 0;
+    color: whitesmoke;
+    position: absolute;
+    top: 82%;
+    width: 100%;
+    height: 12%;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+}
